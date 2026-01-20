@@ -322,17 +322,64 @@ body{
 
 #Featured-Episodes-section{
     background-color: rgba(26, 11, 46, 1);
-    padding: 120px 200px 120px 200px;
+    padding: 120px 200px;
+}
+
+.episode-title{
+font-size: 3rem;
+font-weight: 700;
+line-height: 58px;
+margin: 40px;
+text-align: center;
 }
 
 #video-card-container{
-    display: flex; 
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .video-card{
     width: 100%;
-    aspect-ratio: 16/9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    background-color: rgba(37, 13, 68, 1);
 }
+.video-info>h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 15px;
+
+}
+.video-info>p{
+font-size: 1rem;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+opacity: 0.6;
+}
+.clock-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.clock-btn>p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #00FF88;
+}
+.video-info{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .video-card iframe{
     width: 100%;
     height: 100%;
@@ -356,6 +403,7 @@ body{
 }
 
 #host-section{
+    width: 100%;
     display: flex;
     gap: 24px;
     background-color: rgba(53, 17, 101, 0.4);
@@ -444,6 +492,9 @@ opacity: 0.6;
     font-weight: 400;
     opacity: 0.6;
 }
+
+
+
 
 
 /* Mobile Responsive Style */
@@ -607,6 +658,24 @@ opacity: 0.6;
     padding: 40px 20px;
 }
 
+.episode-title{
+font-size: 2rem;
+margin: 24px;
+}
+
+#video-card-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.video-info>h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
 #host-section{
     display: flex;
     flex-direction: column;
@@ -667,18 +736,5 @@ opacity: 0.6;
     align-items: center;
     gap: 15px;
 }
-/* .podcast-icon>p{
-    font-size: 16px;
-    font-weight: 500;
-    opacity: 0.6;
-} */
-
-/* 
-#copyright{
-    font-size: 1rem;
-    font-weight: 400;
-    opacity: 0.6;
-} */
-
 
 }
