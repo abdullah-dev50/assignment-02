@@ -24,6 +24,12 @@ body{
     background-color: #1A0B2E;
 }
 
+main{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
 
 
 /* header section related style */
@@ -64,6 +70,8 @@ body{
 
 
 
+
+
 /* Banner Section Style Start */
 
 .banner-section{
@@ -85,7 +93,7 @@ body{
     gap: 10px;
 }
 
-.banner-icon{
+.banner-icon-container{
     position: relative;
     width: 350px;
     height: 350px;
@@ -168,9 +176,234 @@ body{
     font-weight: 600;
 }
 
+
+
+
+
+/* About Section Style start */
+
+#about-section{
+    background-color: rgba(26, 11, 46, 1);
+    padding: 50px 200px 120px 200px;
+}
+
+.about-parent-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.first-description{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 28px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.second-description{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 0.8;
+    margin-top: 30px
+}
+
+.about-divider{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 1200px;
+    border: 1px solid var(--#FFFFFF, rgba(255, 255, 255, 1));
+    opacity: 0.1;
+}
+
+.statistics-container{
+    display: grid;
+    justify-content: space-between;
+    gap: 80px;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.statistics{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 240px;
+}
+
+
+.statistics>h3{
+    width: 240px;
+    color: #00FF88;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 58px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.statistics>p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--#FFFFFF, rgba(255, 255, 255, 1));
+    opacity: 0.8;
+}
+
+
+/* Why Choose Section Style  */
+
+#why-choose-section{
+    background-color: rgba(35, 14, 61, 1);
+    padding: 120px 200px 120px 200px;
+}
+.card-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 58px;
+    margin-bottom: 40px;
+}
+
+.card-container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+}
+.two-column{
+    grid-column: span 2;
+}
+.two-row{
+    grid-row: span 2;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+    justify-content: center;
+    align-items: start;
+}
+.card>h3{
+    font-size: 1.5rem;
+    font-weight: 700px;
+    text-align: left;
+}
+.card>p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.8;
+    text-align: left;
+}
+
+
+
+/* Featured-Episodes-section style  */
+
+#Featured-Episodes-section{
+    background-color: rgba(26, 11, 46, 1);
+    padding: 120px 200px;
+}
+
+#video-card-container{
+    display: flex; 
+}
+
+.video-card{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.video-card iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.featured-title{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 58px;
+    margin-bottom: 40px;
+}
+
+.host-title{
+ margin-top: 120px;
+ font-size: 3rem;
+ font-weight: 700;
+ text-align: center;
+ margin-bottom: 40px;
+
+}
+
+#host-section{
+    display: flex;
+    gap: 24px;
+    background-color: rgba(53, 17, 101, 0.4);
+    padding: 40px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.host-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.host-content>h2{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+}
+.host-content>p{
+    font-style: Regular;
+font-size: 1rem;
+font-weight: 400;
+line-height: 24px;
+opacity: 0.6;
+}
+.social-icon{
+    display: flex;
+    gap: 8px;
+}
+.host-icon{
+    display: flex;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(83, 60, 114, 1);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/* Mobile Responsive Style */
+
 @media screen and (max-width:576px){
+    body{
+        max-width: 576px;
+    }
+    
     .brand{
         width: 132px;
+        margin-left: 20px;
     }
     .nav-link, .nav-btn{
         display: none;
@@ -178,5 +411,173 @@ body{
     .navbar>span{
         color: white;
         display: inline;
+        margin-right: 20px;
     }
+
+    /* Bannar Section responsive style  */
+
+    .banner-section{
+    background-size: contain;  
+    }
+
+    .parent-container{
+        padding: 0px;
+        padding-bottom: 40px;  
+    }
+
+    .banner-icon-container{
+    width: 400px;
+    height: 400px;
+    }
+
+    .icon-bg{
+    position: absolute;
+    inset: 0;
+    width: 61%;
+    height: 61%;
+    top: 40%;
+    left: 20%;
+    z-index: 1;
+    }
+
+    .icon{
+    position: absolute;
+    width: 60px;
+    top: 70%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    }
+
+  #new-btn{
+    left: 60%;
+    top: 85%;
+    z-index: 3;
+    font-size: 1.12rem;
+    font-weight: 600;
+    border-radius: 20px;
+    width: 78px;
+    height: 38px;
+    border: none;
+  }
+
+  #banner-title{
+    margin-top: 24px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.banner-description{
+    width: 400px;
+    margin: 8px 0px 24px 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 19px;
+}
+/* About section mobile responsive */
+
+#about-section{
+    padding: 40px 20px 40px 20px;
+}
+
+.about-title{
+    font-size: 2rem;
+}
+
+.first-description{
+    font-size: 1rem;
+    text-align: center;
+}
+.second-description{
+    text-align: center;
+}
+
+.description-br{
+    display: none;
+}
+
+
+
+.statistics-container{
+    display: grid;
+    justify-content: space-between;
+    gap: 40px;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-divider{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 550px;
+    border: 1px solid var(--#FFFFFF, rgba(255, 255, 255, 1));
+    opacity: 0.1;
+}
+
+/* Why Choose Section Responsive style  */
+#why-choose-section{
+    padding: 40px 20px;
+}
+
+.card-title{
+    font-size: 2rem;
+}
+
+.card-container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(1, auto);
+}
+
+.two-column{
+    grid-column: span 1;
+}
+.two-row{
+    grid-row: span 1;
+}
+
+.card>h3{
+    font-size: 1.37rem;
+    font-weight: 700px;
+    
+}
+.card>p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+
+/* Featured episod section style  */
+
+#Featured-Episodes-section{
+    padding: 40px 20px;
+}
+
+#host-section{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 24px;
+}
+.host-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.host-content>h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.host-content>p{
+ 
+    text-align: center;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
 }
